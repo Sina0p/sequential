@@ -1,0 +1,94 @@
+/* General */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+  background: #0a0a0a;
+  color: #ddd;
+}
+
+.app {
+  width: 100%;
+}
+
+/* Sections */
+section {
+  padding: 100px 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #6a0dad 0%, #2575fc 100%);
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Services Section */
+.services {
+  background: #111;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.card {
+  background: linear-gradient(145deg, #1c0a2e, #0f1b3d);
+  border-radius: 15px;
+  padding: 30px;
+  width: 250px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  color: #fff;
+}
+
+.card:hover {
+  transform: translateY(-20px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+/* About Section */
+.about {
+  background: #1a0a2e;
+  color: #ddd;
+}
+
+/* Contact Section */
+.contact {
+  background: #0f1b3d;
+  color: #ddd;
+}
+
+/* Headings */
+h1, h2, h3 {
+  margin: 0;
+  color: #fff;
+}
+
+p {
+  max-width: 600px;
+  margin: 15px auto 0 auto;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+/* Links */
+a {
+  color: #6a0dad;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
