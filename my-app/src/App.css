@@ -1,8 +1,11 @@
+/* ====================== */
 /* General */
+/* ====================== */
+
 body, html {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   scroll-behavior: smooth;
   background: #0a0a0a;
   color: #ddd;
@@ -12,27 +15,156 @@ body, html {
   width: 100%;
 }
 
-/* Sections */
+/* ====================== */
+/* Hero Section with Waves */
+/* ====================== */
+
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background: radial-gradient(circle at 30% 50%, #0a0020, #000);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+}
+
+.hero-btn {
+  background: #fff;
+  color: #2575fc;
+  padding: 15px 35px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #2575fc;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* ====================== */
+/* Infinite Animated Waves */
+/* ====================== */
+
+.ocean {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 50%, #0b0020, #000);
+  z-index: 1;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  width: 200%;
+  height: 200%;
+  background-repeat: repeat-x;
+  background-size: 200% 100%;
+  background-image: radial-gradient(
+    ellipse at center,
+    rgba(106, 13, 173, 0.8) 0%,
+    rgba(37, 117, 252, 0.5) 40%,
+    transparent 80%
+  );
+  opacity: 0.9;
+  animation: waveScroll 18s linear infinite, hueShift 12s ease-in-out infinite alternate;
+  filter: blur(60px);
+  transform: translate3d(0, 0, 0);
+}
+
+.wave:nth-child(2) {
+  opacity: 0.7;
+  animation-duration: 28s, 14s;
+  animation-delay: -5s;
+}
+
+.wave:nth-child(3) {
+  opacity: 0.5;
+  animation-duration: 38s, 16s;
+  animation-delay: -8s;
+}
+
+@keyframes waveScroll {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -200%;
+  }
+}
+
+@keyframes hueShift {
+  0% {
+    filter: hue-rotate(0deg) blur(60px);
+  }
+  100% {
+    filter: hue-rotate(60deg) blur(70px);
+  }
+}
+
+/* ====================== */
+/* Other Sections */
+/* ====================== */
+
 section {
   padding: 100px 20px;
   text-align: center;
+}
+
+.why-us {
+  background: #111;
+}
+
+.reasons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.reason-card {
+  background: linear-gradient(145deg, #1c0a2e, #0f1b3d);
+  border-radius: 15px;
+  padding: 30px;
+  width: 250px;
+  color: #fff;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Hero Section */
-.hero {
-  background: linear-gradient(135deg, #6a0dad 0%, #2575fc 100%);
-  color: white;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.reason-card:hover {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
 
-/* Services Section */
 .services {
-  background: #111;
+  background: #0d0d0d;
 }
 
 .cards {
@@ -48,47 +180,54 @@ section {
   border-radius: 15px;
   padding: 30px;
   width: 250px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  cursor: pointer;
   color: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-20px) scale(1.05);
+  transform: translateY(-15px) scale(1.05);
   box-shadow: 0 20px 40px rgba(0,0,0,0.5);
 }
 
-/* About Section */
 .about {
   background: #1a0a2e;
-  color: #ddd;
 }
 
-/* Contact Section */
 .contact {
   background: #0f1b3d;
-  color: #ddd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Headings */
+.contact-btn {
+  margin-top: 25px;
+  background: linear-gradient(135deg, #6a0dad, #2575fc);
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(101, 44, 211, 0.6);
+}
+
+/* ====================== */
+/* Typography */
+/* ====================== */
+
 h1, h2, h3 {
   margin: 0;
   color: #fff;
 }
 
 p {
-  max-width: 600px;
+  max-width: 650px;
   margin: 15px auto 0 auto;
   line-height: 1.6;
   color: #ccc;
-}
-
-/* Links */
-a {
-  color: #6a0dad;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
 }
