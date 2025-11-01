@@ -11,7 +11,8 @@ function App() {
         </div>
 
         <div className="hero-content">
-          <h1>Professionele Websites voor Jouw Bedrijf</h1>
+          <h1>Welkom bij Sequential</h1>
+          <h1>Waar Jouw Website Tot Leven Komt</h1>
           <p>
             Wij ontwerpen en ontwikkelen moderne, dynamische websites die jouw bedrijf helpen opvallen en online te groeien.
           </p>
@@ -59,7 +60,7 @@ function App() {
       <section className="about">
         <h2>Over Ons</h2>
         <p>
-          Wij zijn twee enthousiaste webontwikkelaars met een passie voor het bouwen van moderne websites die bedrijven helpen groeien.
+          Wij zijn een team van enthousiaste webontwikkelaars met een passie voor het bouwen van moderne websites die jou helpen groeien.
         </p>
       </section>
 
